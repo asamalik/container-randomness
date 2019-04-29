@@ -131,24 +131,23 @@ thead td, thead th {
 """
     return template
         
-
 def main():
     names = [
-        "fedora-httpd:f29",
-        "fedora-mariadb:f29",
-        "fedora-nginx:f29",
-        "fedora-nodejs:f29",
-        "fedora-postgres:f29",
-        "fedora-python:f29",
-        "scratch-fedora-busybox:f29",
-        "scratch-fedora-dnf:f29",
-        "scratch-fedora-httpd:f29",
-        "scratch-fedora-mariadb:f29",
-        "scratch-fedora-microdnf:f29",
-        "scratch-fedora-nginx:f29",
-        "scratch-fedora-nodejs:f29",
-        "scratch-fedora-postgres:f29",
-        "scratch-fedora-python:f29",
+        ("asamalik/fedora-httpd:f29", "httpd"),
+        ("asamalik/fedora-mariadb:f29", "MariaDB"),
+        ("asamalik/fedora-nginx:f29", "nginx"),
+        ("asamalik/fedora-nodejs:f29", "Nodejs"),
+        ("asamalik/fedora-postgres:f29", "PostgreSQL"),
+        ("asamalik/fedora-python:f29", "Python 3"),
+        ("asamalik/scratch-fedora-busybox:f29", "scratch busybox"),
+        ("asamalik/scratch-fedora-dnf:f29", "scratch DNF"),
+        ("asamalik/scratch-fedora-httpd:f29", "scratch httpd"),
+        ("asamalik/scratch-fedora-mariadb:f29", "scratch MariaDB"),
+        ("asamalik/scratch-fedora-microdnf:f29", "scratch microDNF"),
+        ("asamalik/scratch-fedora-nginx:f29", "scratch nginx"),
+        ("asamalik/scratch-fedora-nodejs:f29", "scratch Nodejs"),
+        ("asamalik/scratch-fedora-postgres:f29", "scratch PostgreSQL"),
+        ("asamalik/scratch-fedora-python:f29", "scratch Python 3"),
     ]
 
     base = Image('fedora:29')
@@ -157,7 +156,7 @@ def main():
     images = []
 
     for name in names:
-        image = Image(name)
+        image = Image(*name)
         image.analyze()
         image.compare_with_base(base)
         images.append(image)
