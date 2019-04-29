@@ -66,18 +66,33 @@ def get_template():
 .in-base td {
     background-color: #e3ece1;
 }
+thead td, thead th {
+    background-color: #bbb;
+    text-align: center;
+}
 </style>
+
+<h1> Random Fedora-based container contents </h1>
+
+<p> This page presents a few container images based on Fedora and their overall size and RPM packages. </p>
+
+<p> <a href="https://github.com/asamalik/container-randomness">github/asamalik/container-randomness</a>
+<hr>
+
 <table>
     <thead>
         <tr>
-            <th></th>
+            <td rowspan="3">All packages in this report</td>
+            <td>Fedora Base</td>
+            <td colspan="{{images | length}}">apps or runtimes on the fedora base ("fedora-" prefix) and apps or runtimes on an empty filesystem ("scratch-fedora-" prefix) </td>
+        </tr>
+        <tr>
             <th>{{base.name}}</th>
             {% for image in images %}
             <th>{{image.name}}</th>
             {% endfor %}
         </tr>
         <tr>
-            <td></td>
             <td>{{base.size()}}</td>
             {% for image in images %}
             <td>{{image.size()}}</td>

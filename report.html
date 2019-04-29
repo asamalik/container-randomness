@@ -1,13 +1,29 @@
 
 <style>
 .in-base td {
-    background-color: #fcf;
+    background-color: #e3ece1;
+}
+thead td, thead th {
+    background-color: #bbb;
+    text-align: center;
 }
 </style>
+
+<h1> Random Fedora-based container contents </h1>
+
+<p> This page presents a few container images based on Fedora and their overall size and RPM packages. </p>
+
+<p> <a href="https://github.com/asamalik/container-randomness">github/asamalik/container-randomness</a>
+<hr>
+
 <table>
     <thead>
         <tr>
-            <th></th>
+            <td rowspan="3">All packages in this report</td>
+            <td>Fedora Base</td>
+            <td colspan="15">apps or runtimes on the fedora base ("fedora-" prefix) and apps or runtimes on an empty filesystem ("scratch-fedora-" prefix) </td>
+        </tr>
+        <tr>
             <th>fedora:29</th>
             
             <th>fedora-httpd:f29</th>
@@ -42,7 +58,6 @@
             
         </tr>
         <tr>
-            <td></td>
             <td>269.9 MB</td>
             
             <td>289.3 MB</td>
