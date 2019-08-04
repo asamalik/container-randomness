@@ -133,24 +133,24 @@ thead td, thead th {
         
 def main():
     names = [
-        ("asamalik/fedora-httpd:f29", "httpd"),
-        ("asamalik/fedora-mariadb:f29", "MariaDB"),
-        ("asamalik/fedora-nginx:f29", "nginx"),
-        ("asamalik/fedora-nodejs:f29", "Nodejs"),
-        ("asamalik/fedora-postgres:f29", "PostgreSQL"),
-        ("asamalik/fedora-python:f29", "Python 3"),
-        ("asamalik/scratch-fedora-busybox:f29", "scratch busybox"),
-        ("asamalik/scratch-fedora-dnf:f29", "scratch DNF"),
-        ("asamalik/scratch-fedora-httpd:f29", "scratch httpd"),
-        ("asamalik/scratch-fedora-mariadb:f29", "scratch MariaDB"),
-        ("asamalik/scratch-fedora-microdnf:f29", "scratch microDNF"),
-        ("asamalik/scratch-fedora-nginx:f29", "scratch nginx"),
-        ("asamalik/scratch-fedora-nodejs:f29", "scratch Nodejs"),
-        ("asamalik/scratch-fedora-postgres:f29", "scratch PostgreSQL"),
-        ("asamalik/scratch-fedora-python:f29", "scratch Python 3"),
+        ("asamalik/fedora-httpd:f31", "httpd"),
+        ("asamalik/fedora-mariadb:f31", "MariaDB"),
+        ("asamalik/fedora-nginx:f31", "nginx"),
+        ("asamalik/fedora-nodejs:f31", "Nodejs"),
+        ("asamalik/fedora-postgres:f31", "PostgreSQL"),
+        ("asamalik/fedora-python:f31", "Python 3"),
+        ("asamalik/scratch-fedora-busybox:f31", "scratch busybox"),
+        ("asamalik/scratch-fedora-dnf:f31", "scratch DNF"),
+        ("asamalik/scratch-fedora-httpd:f31", "scratch httpd"),
+        ("asamalik/scratch-fedora-mariadb:f31", "scratch MariaDB"),
+        ("asamalik/scratch-fedora-microdnf:f31", "scratch microDNF"),
+        ("asamalik/scratch-fedora-nginx:f31", "scratch nginx"),
+        ("asamalik/scratch-fedora-nodejs:f31", "scratch Nodejs"),
+        ("asamalik/scratch-fedora-postgres:f31", "scratch PostgreSQL"),
+        ("asamalik/scratch-fedora-python:f31", "scratch Python 3"),
     ]
 
-    base = Image('fedora:29')
+    base = Image('fedora:31')
     base.analyze()
 
     images = []
